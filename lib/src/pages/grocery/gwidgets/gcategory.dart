@@ -1,4 +1,10 @@
+/**
+ * Author: Damodar Lohani
+ * profile: https://github.com/lohanidamodar
+  */
+  
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
 
 class GroceryCategory extends StatelessWidget {
   final String image, title;
@@ -25,7 +31,7 @@ class GroceryCategory extends StatelessWidget {
         width: 100,
         child: Column(
           children: <Widget>[
-            Image.asset(image),
+            PNetworkImage(image),
             Text(title)
           ],
         ),

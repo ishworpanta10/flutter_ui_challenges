@@ -1,5 +1,11 @@
+/**
+ * Author: Damodar Lohani
+ * profile: https://github.com/lohanidamodar
+  */
+  
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/src/pages/grocery/gwidgets/gtypography.dart';
+import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
 
 class GroceryListItemOne extends StatelessWidget {
   final String image, title, price, subtitle;
@@ -30,7 +36,7 @@ class GroceryListItemOne extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Center(child: Image.asset(image, height: 150.0,)),
+                  Center(child: PNetworkImage(image, height: 150.0,)),
                   new GroceryTitle(text: title),
                   new GrocerySubtitle(text: subtitle),
                 ],

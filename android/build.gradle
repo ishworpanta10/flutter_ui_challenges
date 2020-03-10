@@ -5,7 +5,19 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.google.gms:google-services:4.3.3'
+
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+    subprojects {
+        project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+                if (details.requested.group == 'com.google.firebase' &&
+            details.requested.name.contains('firebase-common')) {
+            details.useVersion "19.3.0"
+                }
+        }
+        }    
     }
 }
 

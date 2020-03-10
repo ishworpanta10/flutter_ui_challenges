@@ -1,6 +1,14 @@
+/**
+ * Author: Damodar Lohani
+ * profile: https://github.com/lohanidamodar
+  */
+  
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
+import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
 
 class EcommerceDetailTwoPage extends StatelessWidget {
+  static final String path = "lib/src/pages/ecommerce/ecommerce_detail2.dart";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,7 +17,7 @@ class EcommerceDetailTwoPage extends StatelessWidget {
         children: <Widget>[
           ListView(
             children: <Widget>[
-              Image.asset('assets/img/5.jpg'),
+              PNetworkImage(images[4]),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                 child: Row(
